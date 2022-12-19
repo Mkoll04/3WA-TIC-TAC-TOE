@@ -7,36 +7,52 @@ let case6 = document.getElementsByClassName("box")[5]
 let case7 = document.getElementsByClassName("box")[6]
 let case8 = document.getElementsByClassName("box")[7]
 let case9 = document.getElementsByClassName("box")[8]
+// let tours = 0
+// let joueurs = ["X","O"]
+// tours =  tours % 2
+console.log(case4)
 
-let ticTac = [case1,case2,case3,case4,case5,case6,case7,case8,case9]
+let ticTac = [case1, case2, case3, case4, case5, case6, case7, case8, case9]
 document.addEventListener("DOMContentLoaded", () => {
-    
+    let click = (elements) => {
+        let tours = 0
+        let joueurs = ["X", "O"]
+        tours = tours % 2
+        if (elements === undefined) {
+            for (let i = 0; i < 9; i++) {
+                elements.innerText = joueurs[tours]
+                tours++
+            }
+        }
+    }
+    ticTac.forEach(element => element.addEventListener("click",() => click(element)))
 
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })
