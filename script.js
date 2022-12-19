@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-    console.log(case1[1].value)
+    // console.log(case1[1].value)
 
     let click = (element) => {
         let joueurs = ["X", "O"]
@@ -29,22 +29,28 @@ document.addEventListener("DOMContentLoaded", () => {
         if (element.innerText === "") {
             element.innerText = joueurs[tours]
             tours++
-        }
-    }
+            } else if (element[0].innerText === joueurs[tours] && element[1].innerText === joueurs[tours]&& element[2].innerText ===joueurs[tours]){
+           alert(joueurs[tours] + " win")
+}
+              
+      
+        
+}
 
-
+    
     case1.forEach(element => element.addEventListener("click", () => click(element)))
     
+
     let reset = document.getElementsByClassName("reset")[0]
     let reset1 = (element) => {
-        element.innerText=""
-    } 
+        element.innerText = ""
+    }
     reset.addEventListener("click", () => {
         case1.forEach(element => reset1(element))
-        
-        
-      console.log(case1[1])  
-        
+
+
+        //   console.log(case1[1])  
+
     })
 
 
